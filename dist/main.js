@@ -178,7 +178,7 @@ window.addEventListener('click', () => {
     if (intersectsCanon.length > 0) {
       window.location.href = 'page2.html'; // Redirect for canon
     } else if (intersectsBible.length > 0) {
-      window.location.href = 'page1.html'; // Redirect for bible
+      window.location.href = './page1.html'; // Redirect for bible
     } else if (intersectsDesktop.length > 0) {
       window.location.href = './page4.html'; // Redirect for desktop
     }
