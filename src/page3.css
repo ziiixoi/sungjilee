@@ -1,0 +1,291 @@
+figure {
+    margin: 0;
+}
+
+img {
+    height: auto;
+    max-width: 100%;
+    vertical-align: middle;
+}
+
+.grid {
+    margin-inline: auto;
+    max-width: 1600px;
+    width: 60%;
+    padding-top: 200px;
+    padding-bottom: 200px;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(20, 1fr);
+    row-gap: 15em;
+    column-gap: 2em;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.gallery__item {
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.gallery__item img {
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    border: 2px solid black;
+    cursor: pointer; /* 클릭 가능 표시 */
+}
+
+.gallery__item figcaption {
+    font-family: Arial, sans-serif;
+    color: rgb(50, 50, 50);
+    margin-top: 0.6rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.figcaption-header {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.gallery__item .title {
+    font-weight: bold;
+    font-size: 1rem;
+    text-align: left;
+}
+
+.gallery__item .date {
+    font-size: 0.7rem;
+    text-align: right;
+    margin-top: 0.3125rem;
+}
+
+.gallery__item .camera {
+    font-size: 0.7rem;
+    text-align: left;
+    margin-top: 0.3125rem;
+}
+
+.modal {
+    display: none; /* 기본적으로 숨김 */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 1000;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer; /* 모달 클릭 가능 */
+    transition: opacity 0.3s ease; /* 부드러운 등장 */
+}
+
+.modal img {
+    max-width: 80%;
+    max-height: 80%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.modal .close {
+    position: absolute;
+    top: 50px;
+    right: 250px;
+    font-size: 2rem;
+    color: white;
+    cursor: pointer;
+}
+
+
+.gallery__item:nth-child(7n + 1) {
+    grid-column: 2 / span 9;
+    grid-row: 1 / span 1;
+}
+
+.gallery__item:nth-child(7n + 2) {
+    grid-column: 12 / span 9;
+    grid-row: 1 / span 2;
+}
+
+.gallery__item:nth-child(7n + 3) {
+    grid-column: 1 / span 9;
+    grid-row: 2/ span 1;
+}
+
+.gallery__item:nth-child(7n + 4) {
+    grid-column: 11 / span 9;
+    grid-row: 2/ span 2;
+    margin-block-end: 10em;
+}
+
+.gallery__item:nth-child(7n + 5) {
+    grid-column: 2 / span 9;
+    grid-row: 3/ span 1;
+    margin-block-start: 20em;
+}
+
+.gallery__item:nth-child(7n + 6) {
+    grid-column: 14 / span 7;
+    grid-row: 3/ span 2;
+}
+
+.gallery__item:nth-child(7n + 7) {
+    grid-column: 3 / span 7;
+    grid-row: 4 / span 1;
+}
+
+.gallery__item:nth-child(7n + 8) {
+    grid-column: 12 / span 9;
+    grid-row: 4 / span 2;
+    margin-block-end: 10em;
+}
+
+.gallery__item:nth-child(7n + 9) {
+    grid-column: 1 / span 18;
+    grid-row: 5 / span 1;
+    margin-block-start: 18em;
+}
+
+.gallery__item:nth-child(7n + 10) {
+    grid-column: 11 / span 9;
+    grid-row: 5 / span 2;
+    margin-block-start: 20em;
+
+}
+
+.gallery__item:nth-child(7n + 11) {
+    grid-column: 1 / span 9;
+    grid-row: 6 / span 1;
+    margin-block-start: 45em;
+}
+
+.gallery__item:nth-child(7n + 12) {
+    grid-column: 12 / span 9;
+    grid-row: 6 / span 2;
+    margin-block-start: 20em;
+}
+
+.gallery__item:nth-child(7n + 13) {
+    grid-column: 2 / span 9;
+    grid-row: 7 / span 1;
+}
+
+.gallery__item:nth-child(7n + 14) {
+    grid-column: 13 / span 7;
+    grid-row: 7 / span 2;
+    margin-block-start: 10em;
+}
+
+.gallery__item:nth-child(7n + 15) {
+    grid-column: 1 / span 9;
+    grid-row: 8 / span 1;
+    margin-block-start: 20em;
+}
+
+.gallery__item:nth-child(7n + 16) {
+    grid-column: 12 / span 7;
+    grid-row: 8 / span 2;
+    margin-block-start: 20em;
+}
+
+.gallery__item:nth-child(7n + 17) {
+    grid-column: 2 / span 9;
+    grid-row: 9 / span 1;
+    margin-block-start: 20em;
+}
+
+.gallery__item:nth-child(7n + 18) {
+    grid-column: 14 / span 7;
+    grid-row: 9 / span 2;
+    margin-block-start: 20em;
+}
+
+.gallery__item:nth-child(7n + 19) {
+    grid-column: 3 / span 9;
+    grid-row: 10 / span 1;
+}
+
+.gallery__item:nth-child(7n + 20) {
+    grid-column: 11 / span 9;
+    grid-row: 10 / span 2;
+    margin-block-start: 20em;
+}
+
+.gallery__item:nth-child(7n + 21) {
+    grid-column: 1 / span 7;
+    grid-row: 11 / span 1;
+
+}
+
+.gallery__item:nth-child(7n + 22) {
+    grid-column: 10 / span 9;
+    grid-row: 11 / span 2;
+    margin-block-end: 15em;
+}
+
+.gallery__item:nth-child(7n + 23) {
+    grid-column: 2 / span 7;
+    grid-row: 12 / span 1;
+    margin-block-end: 10em;
+}
+
+.gallery__item:nth-child(7n + 24) {
+    grid-column: 11 / span 9;
+    grid-row: 12 / span 2;
+    margin-block-end: 20em;
+}
+
+.gallery__item:nth-child(7n + 25) {
+    grid-column: 1 / span 9;
+    grid-row: 13 / span 1;
+    margin-block-end: 25em;
+}
+
+.gallery__item:nth-child(7n + 26) {
+    grid-column: 12 / span 7;
+    grid-row: 13 / span 2;
+    margin-block-end: 30em;
+}
+
+.gallery__item:nth-child(7n + 27) {
+    grid-column: 2 / span 9;
+    grid-row: 14 / span 1;
+    margin-block-end: 55em;
+
+}
+
+.gallery__item:nth-child(7n + 28) {
+    grid-column: 12 / span 9;
+    grid-row: 14 / span 2;
+}
+
+.menu_bar {
+    position: fixed;
+    top: 200px;
+    left: 100px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.menu_item {
+    text-decoration: none;
+    color: black;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 1.2rem;
+}
+
+.menu_item:hover {
+    background-color: #A7F6C2;
+    cursor: pointer;
+}
