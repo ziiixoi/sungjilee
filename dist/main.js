@@ -180,7 +180,7 @@ window.addEventListener('click', () => {
     } else if (intersectsBible.length > 0) {
       window.location.href = 'page1.html'; // Redirect for bible
     } else if (intersectsDesktop.length > 0) {
-      window.location.href = 'page4.html'; // Redirect for desktop
+      window.location.href = './page4.html'; // Redirect for desktop
     }
   }
 });
